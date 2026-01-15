@@ -1,14 +1,33 @@
-from ehrql import create_dataset
-from ehrql.tables.tpp import patients, practice_registrations
+# LIBRARIES
 
-dataset = create_dataset()
+# cohort extractor
+from cohortextractor import StudyDefinition, patients, dataset
 
-index_date = "2020-03-31"
+# set the index date
+index_date = "2020-01-01"
 
-has_registration = practice_registrations.for_patient_on(
-    index_date
-).exists_for_patient()
+# STUDY POPULATION
+dataset.configure_dummy_data(population_size=10000)
 
-dataset.define_population(has_registration)
-
-dataset.sex = patients.sex
+study = StudyDefinition(
+    default_expectations={
+        "date": {
+            "earliest": index_date,
+            "latest": "today",
+        },  # date range for simulated dates
+        "rate": "uniform",
+        "incidence": 1,
+    },
+    # This line defines the study population
+    population=patients.registered_as_of(index_date),
+    # this line defines the stp variable we want to extract
+    stp=patients.registered_practice_as_of(
+        index_date,
+        returning="stp_code",
+        return_expectations={
+            "incidence": 0.99,
+            "category": {"ratios": {"STP1": 0.3, "STP2": 0.2, "STP3": 0.5}},
+        },
+    ),
+    dummy_population_size=10000
+)
