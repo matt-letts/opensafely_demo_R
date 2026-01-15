@@ -6,7 +6,7 @@ expectations:
 actions:
 
   generate_cohort_stppop:
-    run: cohortextractor:latest generate_cohort --study-definition dataset_definition --output-dir=output/cohorts
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_1_stppop --output-dir=output/cohorts
     outputs:
       highly_sensitive:
         cohort: output/cohorts/input_1_stppop.csv

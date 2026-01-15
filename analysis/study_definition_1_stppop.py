@@ -1,13 +1,12 @@
 # LIBRARIES
 
 # cohort extractor
-from cohortextractor import StudyDefinition, patients, dataset
+from cohortextractor import StudyDefinition, patients
 
 # set the index date
 index_date = "2020-01-01"
 
 # STUDY POPULATION
-dataset.configure_dummy_data(population_size=10000)
 
 study = StudyDefinition(
     default_expectations={
@@ -29,5 +28,4 @@ study = StudyDefinition(
             "category": {"ratios": {"STP1": 0.3, "STP2": 0.2, "STP3": 0.5}},
         },
     ),
-    dummy_population_size=10000
 )
