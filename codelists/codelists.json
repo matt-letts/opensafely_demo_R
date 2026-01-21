@@ -1,28 +1,10 @@
 {
   "files": {
-    "opensafely-ethnicity-snomed-0removed.csv": {
-      "id": "opensafely/ethnicity-snomed-0removed/22911876",
-      "url": "https://www.opencodelists.org/codelist/opensafely/ethnicity-snomed-0removed/22911876/",
-      "downloaded_at": "2026-01-20 12:35:41.619175Z",
-      "sha": "d95a2f826299563aa57f6fa99009e6e13a65151b"
-    },
-    "opensafely-smoking-clear.csv": {
-      "id": "opensafely/smoking-clear/2020-04-29",
-      "url": "https://www.opencodelists.org/codelist/opensafely/smoking-clear/2020-04-29/",
-      "downloaded_at": "2026-01-20 12:35:41.667931Z",
-      "sha": "0b5f3afe1db96dcce5141220e893a42ba2e5a8f7"
-    },
-    "user-elsie_horne-bmi_obesity_snomed.csv": {
-      "id": "user/elsie_horne/bmi_obesity_snomed/0764e9b4",
-      "url": "https://www.opencodelists.org/codelist/user/elsie_horne/bmi_obesity_snomed/0764e9b4/",
-      "downloaded_at": "2026-01-20 12:35:41.721813Z",
-      "sha": "18926afcb4bc165e7709a17c89735b2c03b81005"
-    },
-    "user-elsie_horne-bmi_obesity_icd10.csv": {
-      "id": "user/elsie_horne/bmi_obesity_icd10/6e55767e",
-      "url": "https://www.opencodelists.org/codelist/user/elsie_horne/bmi_obesity_icd10/6e55767e/",
-      "downloaded_at": "2026-01-20 12:35:41.771155Z",
-      "sha": "9235bab1c2f3b5581dd34431839db55f3d3bdb59"
+    "opensafely-covid-identification.csv": {
+      "id": "opensafely/covid-identification/2020-06-03",
+      "url": "https://www.opencodelists.org/codelist/opensafely/covid-identification/2020-06-03/",
+      "downloaded_at": "2026-01-21 09:35:52.323750Z",
+      "sha": "124db6929439379b7dacd55ba26ae4f2ed9370bc"
     }
   }
 }
